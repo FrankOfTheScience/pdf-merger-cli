@@ -1,11 +1,15 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name="pdf-merger-cli",
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
-        "PyPDF2"
+        "PyPDF2",
+        "typer[all]"
     ],
     entry_points={
         "console_scripts": [
@@ -13,13 +17,13 @@ setup(
         ],
     },
     author="Francesco Dell'Ascenza",
-    description="Merge multiple PDF files into a single PDF file in a command line interface.",
-    long_description=open("README.md").read(),
+    description="A simple CLI tool to merge PDFs using Python",
+    long_description=long_description,
     long_description_content_type="text/markdown",
-    license="MIT",
     classifiers=[
         "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.7',
+    python_requires=">=3.7",
 )
