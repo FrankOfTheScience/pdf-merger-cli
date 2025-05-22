@@ -11,5 +11,5 @@ dependencies = ["typer[all]", "PyPDF2"]
 pdf-merge = "pdf_merger_cli.main:app"
 
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
