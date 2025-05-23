@@ -16,12 +16,13 @@ def merge(
     all_paths = []
 
     for path in input_paths:
+        path = path.resolve()
         if path.is_dir():
             all_paths.extend(sorted(path.glob("*.pdf")))
         elif path.is_file():
             all_paths.append(path)
         else:
-            typer.echo(f"Path not found: {path}")
+            typer.echo(f"❌ Path not found: {path}")
             raise typer.Exit(1)
 
     if not ordered:
