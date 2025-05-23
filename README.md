@@ -1,6 +1,6 @@
 # 📎 pdf-merger-cli
 
-Un semplice tool CLI per unire file PDF in Python.
+Simple CLI tool to merge PDF files in a single one. Support merge of entire directories and custom order.
 
 ## 📦 Installation
 
@@ -17,20 +17,13 @@ pdfmerge file1.pdf file2.pdf -o output.pdf
 Even entire directories:
 
 ```bash
-pdfmerge ./documenti/ -o merged.pdf
+pdf-merge ./documenti/ -o merged.pdf
 ```
 
 With manual ordering:
 
 ```bash
-pdfmerge 3.pdf 1.pdf 2.pdf -o merged.pdf --ordered
-```
-
-🧪 Unit Tests
-
-```bash
-pip install .
-pdfmerge ...
+pdf-merge 3.pdf 1.pdf 2.pdf -o merged.pdf --ordered
 ```
 
 ## 🐍 Requirements

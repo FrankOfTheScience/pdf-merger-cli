@@ -13,7 +13,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "pdfmerge=pdf_merger_cli.__main__:app",
+            "pdf-merge=pdf_merger_cli.__main__:app",
         ],
     },
     author="Francesco Dell'Ascenza",
